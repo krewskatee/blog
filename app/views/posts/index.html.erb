@@ -1,6 +1,8 @@
-<h1>Listing posts</h1>
+<div class="jumbotron" style="background-image: url(assets/new.svg)">
+  <h1 style="color:#fff">Blog</color></h1>
+</div>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -14,9 +16,9 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', post, class: 'btn btn-success' %></td>
+        <td><%= link_to 'Edit', edit_post_path(post), class:'btn btn-warning' %></td>
+        <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +26,10 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class:'btn btn-info' %>
+
+
+
+
+
+
